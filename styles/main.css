@@ -1,0 +1,161 @@
+body {
+  /* background-image: url("https://s3-ap-southeast-2.amazonaws.com/testops.guru/images/background.jpg");
+  opacity: 0.95; */
+   background-color: rgb(193, 198, 201);
+   /* background-size: 100%;
+  background-repeat: no-repeat; */
+  
+}
+
+.content {
+  padding: 30px;
+
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0em;
+  line-height: .9em;
+  color: #000000;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: .04em;
+  color: #000
+}
+
+a {
+  text-decoration: none;
+  color: #787878;
+}
+
+a:visited {
+    color: #787878;
+}
+
+.blog {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: .04em;
+    color: #787878;
+}
+
+
+.social {
+  position: absolute;
+  bottom: 0;
+  right:25%;
+  left:25%;
+
+}
+
+.li {
+  background:url('https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.newdesignfile.com%2Fpostpic%2F2009%2F08%2Fround-linkedin-icon_372059.png&f=1') no-repeat 0 0;
+}
+
+/* ==========================================================================
+   2.3 Social Iocns
+   ========================================================================== */
+.social-icons {
+  margin-top: 40px;
+}
+
+.social-icons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons ul li {
+  display: inline;
+}
+
+.social-icons ul li a {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #ddd;
+  font-size: 16px;
+}
+
+.social-icons ul li a:hover {
+  color: #fff;
+}
+
+.facebook a {
+  color: #4867AA;
+}
+
+.facebook a:hover {
+  background: #4867AA;
+}
+
+.twitter a {
+  color: #1DA1F2;
+}
+
+.twitter a:hover {
+  background: #1DA1F2;
+}
+
+.google-plus a {
+  color: #DD4D42;
+}
+
+.google-plus a:hover {
+  background: #DD4D42;
+}
+
+.youtube a {
+  color: #DF2926;
+}
+
+.youtube a:hover {
+  background: #DF2926;
+}
+
+.linkedin a {
+  color: #007BB6;
+}
+
+.linkedin a:hover {
+  background: #007BB6;
+}
+
+.pinterest a {
+  color: #BD081C;
+}
+
+.pinterest a:hover {
+  background: #BD081C;
+}
+
+.dribbble a {
+  color: #EA4C89;
+}
+
+.dribbble a:hover {
+  background: #EA4C89;
+}
+
+.behance a {
+  color: #0B7CFF;
+}
+
+.behance a:hover {
+  background: #0B7CFF;
+}

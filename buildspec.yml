@@ -1,0 +1,14 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - echo nothing to build
+artifacts:
+  files:
+    - index.html
+    - privacy.html
+    - images/*
+    - fonts/*
+    - styles/*
+    - favicon.ico
