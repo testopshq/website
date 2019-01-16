@@ -24,8 +24,8 @@ def lambda_handler(event, context):
 
         s3 = boto3.resource('s3')
 
-        portfolioBuild_bucket = s3.Bucket(location["bucketName"])
-        portfolio_bucket = s3.Bucket('testops.co')
+        siteBuild_bucket = s3.Bucket(location["bucketName"])
+        site_bucket = s3.Bucket('testops.co')
 
         site_zip = io.BytesIO()
         siteBuild_bucket.download_fileobj(location["objectKey"], site_zip)
