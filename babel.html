@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Babel demo</title>
-  </head>
-  <body>
-    <main>
-      <label> Name:
-        <input type="text" id="name">
-      </label>
-      <button type="button" id="submit info">Click me</button>
-      <div id="content">
-      </div>
-    </main>
 
-    <script src="https://unpkg.com/babel-standalone">
-    </script>
-    <script type="text/babel" data-presets="latest">
-      const getMessage = (name) => `Welcome to javascript, ${name}!`; //fat arrow
-      const button = document.getElementById('submit info');
+<head>
+  <meta charset="utf-8">
+  <title>Babel demo</title>
+
+  <style media="screen">
+    .errorBox {
+        border: 1px solid red;
+        background-color: #eebbbb;
+        margin: 1em;
+        padding: 2em
+      }
+      .errorBox-hidden {
+        display: none
+      }
+    </style>
+  <script src="https://unpkg.com/babel-standalone"></script>
+</head>
+
+<body>
+  <main>
+    <input type="text" id="email" placeholder="email"><br><br>
+    <input type="text" id="message" placeholder="message"><br><br>
+    <button type="button" id="sendButton">Send</button>
+
+    <div id="content"></div>
+    <div id="error" class="errorBox-hidden"></div>
+  </main>
+
+  <script type="text/babel" data-presets="latest">
+      const button = document.getElementById('sendButton');
+      const messageArea = document.getElementById("error");
+
+      const contentArea = document.getElementById('content');
 
       button.addEventListener('click', (evt) => {
-        let name = document.getElementById("name").value;
-
-        if (name.length < 1) {
-          alert("You need to enter a name")
+        let email = document.getElementById("email").value;
+        if ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+          contentArea.textContent = "Message sent. Thank you.";
+          messageArea.className = 'errorBox-hidden'
         }
         else {
-          document.getElementById('content').textContent = getMessage(name);
+          contentArea.textContent = "";
+          messageArea.textContent = "Please enter a valid email";
+          messageArea.className = 'errorBox'
         }
-      });
 
+      });
     </script>
-  </body>
+</body>
+
 </html>
