@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>React Demo</title>
+
+  <style media="screen">
+    
+    .inputGrpoup {
+      align-self: center;
+    }
+
+    .input {
+      margin: 1em
+    }
+
+    .messageBox {
+      border: 1px solid;
+      margin: 1em;
+      padding: 2em
+    }
+
+    .error {
+      border-color: red;
+      background-color: #eebbbb;
+    }
+
+    .success {
+      border-color:blue;
+      background-color: #aabbee;
+    }
+
+    .hidden {
+      display: none
+    }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <main id="content"></main>
+  
+
+  <script type="text/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/chai@4.2.0/chai.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/mocha@3.4.2"></script>
+
+  <script type="text/babel" data-presets="react">
+
+    class EmailInput extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {
+          message: {
+            type: undefined,
+            body: undefined
+          }
+        }
+        this.buttonClicked = this.buttonClicked.bind(this);
+      }  
+      
+      buttonClicked(evt) {
+        let email = this.refs.emailInput.value;
+        this.setState({
+          
+          message: {
+            type: ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) ? "success" : "error",
+            body: ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) ? "Message sent. Thank you." : "Please provide your email."
+          }
+        });
+      }
+
+      render() {
+        let msg = this.state.message;
+        return (
+          <div class="inputGrpoup">
+            <input ref="emailInput" type="text" class="input" placeholder="email" />
+            <input type="text" id="message" class="input" placeholder="message"></input>
+            <button onClick={this.buttonClicked} type="button" id="sendButton">Send</button>
+            <MessageBox type={msg.type} message={msg.body} />
+          </div>
+        )
+      }
+    }
+
+    class MessageBox extends React.Component {
+      render() {
+        return(
+          <div className={"messageBox " + (this.props.type || 'hidden')}> 
+            {this.props.message}
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(<EmailInput />, document.getElementById('content'));
+  </script>
+
+  <script type="text/babel" data-presets="react">
+    const assert = chai.assert;
+      assert.equal(5 + 3, 8, "Math works");
+      assert.notEqual(5 + 3, 10, "Math works");
+      assert.isDefined(EmailInput, "EmailInput is defined");
+      assert.isDefined(MessageBox, "MessageBox is defined");
+      asse
+  </script>
+</body>
+</html>
