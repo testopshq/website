@@ -8,12 +8,78 @@
   <meta property="og:image" content="//https://s3-ap-southeast-2.amazonaws.com/testops.co/images/testopslogo_s.png"/>
   <meta property="og:description" content="Delivering quality insights"/>
   <meta property="og:url" content="//testops.co" />  
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Test Automation Advisory</title>
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans|Raleway:100" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    * {
+      box-sizing: border-box;
+    }
+  
+    /* Style inputs */
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+  
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+  
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: none;
+      padding: 10px;
+    }
+  
+    /* Create two columns that float next to eachother */
+    .column {
+      float: center;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+  
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+  
+      .column,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80993046-1"></script>
@@ -37,26 +103,51 @@
       <!-- Content -->
       <div>
         <div>
-          <h1 class="name"><a class="name">Test Engineers</a></h1>
+          <h1 class="name"><a class="name">Daniel Alter</a></h1>
         </div>
         <div>
-          <p><a href="https://abr.business.gov.au/ABN/View?id=17669406684">ABN 17669406684</a></p>
+          <p><a>
+              Software Tester
+            </a>
+          </p>
+          <!-- <p><a>
+            With the current trend towards Agile software development, DevOps and frequent builds, you need faster, more
+            comprehensive testing to improve both quality and velocity.
+            </a>
+          </p> -->
+          <!-- <p>
+            Effective Agile and DevOps testing involves practices such as ‘shift left’ and continuous testing – automated software
+            testing is the basis of these practices. In ‘shift left’, testing begins in development. It begins with automating the
+            unit test layer and effectively creates a pyramid whereby the bulk of the testing takes place in the unit and API
+            layers. This increases velocity because less testing is needed at the UI level.
+            
+            Continuous testing is the backbone of continuous integration. It is the execution of automated tests throughout the
+            delivery pipeline, and involves running risk-based, automated regression tests prior to each deployment within the
+            pipeline, including post-production health checks.
+          </p> -->
         </div>
       </div>
 
       <!-- Contact form -->
-      <!-- <div style="width: 100%; height:500px; position: relative; overflow: hidden;">
-        <form class="col-md-12 seperate" method="POST" action="https://formspree.io/daniel8alter@gmail.com">
-          <input class="form-control input-lg form-el" type="email" name="email" placeholder="Your email">
-          <br>
-          <textarea class="form-control input-lg form-el" name="message" placeholder="Message"></textarea>
-          <br>
-          <span class="input-group-btn">
-            <button id="cspio-subscribe-btn" type="submit" class="btn-lg btn-primary form-el noglow">Send</button>
-          </span>
-          <br>
-        </form>
+
+      <!-- <div class="container">
+        <div style="text-align:center">
+          <p><a>Contact an Automation Testing Expert:</a></p>
+          
+        </div>
+        <div class="row">
+          
+          <div class="column">
+            <form action="/action_page.php">
+              <input type="text" id="fname" name="name" placeholder="Your name..">
+              <input type="text" id="email" name="email" placeholder="Your email.">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Contact us">
+            </form>
+          </div>
+        </div>
       </div> -->
+
       <!-- Social icons -->
       <div class="social-icons">
         <ul>
@@ -65,6 +156,11 @@
           <li class="github"><a href="https://angel.co/testopshq"><i class="fa fa-angellist"></i></a></li>
           <!-- <li class="github"><a href="https://twitter.com/testopshq"><i class="fa fa-twitter"></i></a></li> -->
         </ul>
+      </div>
+
+      <!-- ABN footer -->
+      <div>
+        <p><a href="https://abr.business.gov.au/ABN/View?id=17669406684">ABN 17669406684</a></p>
       </div>
 
       <!-- Landbot -->
